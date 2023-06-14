@@ -1,70 +1,63 @@
-'use client'
-
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Page() {
-  const router = useRouter()
 
   return (
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-        </a>
-
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            Home
-          </a>
-
-          <a class="navbar-item">
-            Documentation
-          </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More
-            </a>
-
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                About
-              </a>
-              <a class="navbar-item">
-                Jobs
-              </a>
-              <a class="navbar-item">
-                Contact
-              </a>
-              <hr class="navbar-divider" />
-              <a class="navbar-item">
-                Report an issue
-              </a>
-            </div>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div className="post-preview">
+            <Link href="/post">
+              <h2 className="post-title">
+                Man must explore, and this is exploration at its greatest
+              </h2>
+              <h3 className="post-subtitle">
+                Problems look mighty small from 150 miles up
+              </h3>
+            </Link>
+            <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
           </div>
-        </div>
-
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light">
-                Log in
-              </a>
-            </div>
+          <hr />
+          <div className="post-preview">
+            <Link href="/post">
+              <h2 className="post-title">
+                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+              </h2>
+            </Link>
+            <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
           </div>
+          <hr />
+          <div className="post-preview">
+            <Link href="/post">
+              <h2 className="post-title">
+                Science has not yet mastered prophecy
+              </h2>
+              <h3 className="post-subtitle">
+                We predict too much for the next year and yet far too little for the next ten.
+              </h3>
+            </Link>
+            <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
+          </div>
+          <hr />
+          <div className="post-preview">
+            <Link href="/post">
+              <h2 className="post-title">
+                Failure is not an option
+              </h2>
+              <h3 className="post-subtitle">
+                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+              </h3>
+            </Link>
+            <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
+          </div>
+          <hr />
+          <ul className="pager">
+            <li className="next">
+              <a href="#">Older Posts</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
   )
 }
